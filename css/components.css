@@ -1265,9 +1265,11 @@
   .pager-link {
     display: grid;
     gap: 0.75rem;
+    min-width: 0;
     padding: 2rem var(--gutter);
     color: var(--fg);
     text-decoration: none;
+    container-type: inline-size;
     transition: background-color var(--dur-1) steps(2), color var(--dur-1) steps(2);
   }
 
@@ -1276,12 +1278,24 @@
     text-align: right;
   }
 
+  /* Names are often one long word (PSYCHOSTART) that can't wrap, so the size is
+     also capped by the cell width: an 11-letter name always fits its own cell. */
   .pager-link strong {
     font-weight: var(--display-weight);
-    font-size: var(--step-3);
+    font-size: min(var(--step-3), 13cqi);
     line-height: 0.92;
     letter-spacing: var(--display-tracking);
     text-transform: uppercase;
+    overflow-wrap: break-word; /* last resort, never spill into the next cell */
+  }
+
+  /* Phones: previous and next stack, so each name gets the full width. */
+  @media (max-width: 640px) {
+    .case__pager { grid-template-columns: 1fr; }
+    .pager-link + .pager-link {
+      border-left: 0;
+      border-top: var(--hair);
+    }
   }
 
   .pager-link:hover { background: var(--signal); color: var(--on-signal); }
