@@ -1289,12 +1289,60 @@
     overflow-wrap: break-word; /* last resort, never spill into the next cell */
   }
 
-  /* Phones: previous and next stack, so each name gets the full width. */
+  .pager-link__thumb { display: none; }
+
+  /* Phones: previous and next stack, one per row, and each row zigzags a peek at
+     that case's cover into the side the name leaves empty:
+       [ <- prev / NAME | cover ]
+       [ cover | next -> / NAME ]
+     The label tops out with the cover and the name bottoms out with it. */
   @media (max-width: 640px) {
     .case__pager { grid-template-columns: 1fr; }
+
+    /* The cover takes 26% of the row (a % track = 26cqi seen from inside). */
+    .pager-link {
+      grid-template-columns: minmax(0, 1fr) 26%;
+      grid-template-rows: auto 1fr;
+      column-gap: 1rem;
+      padding-block: 1.5rem;
+    }
+
     .pager-link + .pager-link {
+      grid-template-columns: 26% minmax(0, 1fr);
       border-left: 0;
       border-top: var(--hair);
+    }
+
+    /* The name now shares the row with the cover: cap it by what is left. */
+    .pager-link strong {
+      align-self: end;
+      font-size: min(var(--step-3), calc((74cqi - 1rem) * 0.13));
+    }
+
+    .pager-link__thumb {
+      display: grid;
+      place-items: center;
+      grid-row: 1 / -1;
+      grid-column: 2;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: var(--fg-05);
+    }
+
+    .pager-link + .pager-link .pager-link__thumb { grid-column: 1; }
+    .pager-link + .pager-link > :not(.pager-link__thumb) { grid-column: 2; }
+
+    .pager-link__thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .pager-link__glyph {
+      font-weight: var(--display-weight);
+      font-size: 1.25rem;
+      letter-spacing: var(--display-tracking);
+      color: var(--fg-40);
     }
   }
 

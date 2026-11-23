@@ -272,13 +272,26 @@ function renderPager(prev, next) {
       { class: 'pager-link', href: `#/work/${prev.slug}`, dataset: { pager: '-1' } },
       h('span', { class: 'mono' }, `<- Prev // ${prev.code}`),
       h('strong', {}, prev.title),
+      pagerThumb(prev),
     ),
     h(
       'a',
       { class: 'pager-link', href: `#/work/${next.slug}`, dataset: { pager: '1' } },
       h('span', { class: 'mono' }, `Next // ${next.code} ->`),
       h('strong', {}, next.title),
+      pagerThumb(next),
     ),
+  );
+}
+
+/** A peek at the neighbouring case's cover (shown where the pager stacks). */
+function pagerThumb(p) {
+  return h(
+    'span',
+    { class: 'pager-link__thumb', 'aria-hidden': 'true' },
+    p.cover
+      ? h('img', { src: p.cover.src, width: p.cover.width, height: p.cover.height, alt: '', loading: 'lazy', decoding: 'async' })
+      : h('span', { class: 'pager-link__glyph' }, p.monogram),
   );
 }
 
