@@ -270,29 +270,29 @@ function renderPager(prev, next) {
     h(
       'a',
       { class: 'pager-link', href: `#/work/${prev.slug}`, dataset: { pager: '-1' } },
-      h('span', { class: 'mono' }, `<- Prev // ${prev.code}`),
+      h('span', { class: 'mono' }, h('span', { class: 'pager-link__dir', 'aria-hidden': 'true' }, '<- '), `Prev // ${prev.code}`),
       h('strong', {}, prev.title),
-      pagerThumb(prev),
+      pagerArrow(),
     ),
     h(
       'a',
       { class: 'pager-link', href: `#/work/${next.slug}`, dataset: { pager: '1' } },
-      h('span', { class: 'mono' }, `Next // ${next.code} ->`),
+      h('span', { class: 'mono' }, `Next // ${next.code}`, h('span', { class: 'pager-link__dir', 'aria-hidden': 'true' }, ' ->')),
       h('strong', {}, next.title),
-      pagerThumb(next),
+      pagerArrow(),
     ),
   );
 }
 
-/** A peek at the neighbouring case's cover (shown where the pager stacks). */
-function pagerThumb(p) {
-  return h(
-    'span',
-    { class: 'pager-link__thumb', 'aria-hidden': 'true' },
-    p.cover
-      ? h('img', { src: p.cover.src, width: p.cover.width, height: p.cover.height, alt: '', loading: 'lazy', decoding: 'async' })
-      : h('span', { class: 'pager-link__glyph' }, p.monogram),
-  );
+/** Long hairline arrow with a terminal node at its tail, shown where the pager
+ *  stacks. It points right; CSS mirrors it for "prev". */
+function pagerArrow() {
+  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('class', 'pager-link__arrow');
+  svg.setAttribute('viewBox', '0 0 96 32');
+  svg.setAttribute('aria-hidden', 'true');
+  svg.innerHTML = '<rect x="1" y="13" width="6" height="6"/><path d="M7 16h85M79 3 92 16 79 29"/>';
+  return svg;
 }
 
 /**
