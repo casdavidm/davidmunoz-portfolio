@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated": "2026-11-22",
+  "updated": "2026-11-23",
 
   "profile": {
     "name": "David Muñoz",
@@ -305,6 +305,31 @@
         { "type": "image", "src": "assets/img/work/drmc/01.jpg", "width": 1200, "height": 896, "alt": "DRMC team member in a navy cap and polo embroidered with the DRMC logo, standing in a bright, freshly cleaned living room", "caption": "Uniforms" },
         { "type": "image", "src": "assets/img/work/drmc/02.jpg", "width": 1200, "height": 896, "alt": "Two-sided DRMC business cards: the logo reversed on navy, and contact details on white", "caption": "Business cards" },
         { "type": "image", "src": "assets/img/work/drmc/03.jpg", "width": 1200, "height": 896, "alt": "DRMC invoice with a navy header band, lime accents and a faint duster watermark", "caption": "Invoice template" }
+      ]
+    },
+    {
+      "slug": "utp",
+      "title": "UTP",
+      "client": "Universidad Tecnológica de Pereira",
+      "category": "Identity & Wayfinding",
+      "disciplines": ["brand"],
+      "tags": [],
+      "year": "2013",
+      "sector": "Higher Education",
+      "status": "published",
+      "monogram": "UTP",
+      "summary": "A folded, multicolour identity and campus wayfinding system for a public university in Pereira, Colombia.",
+      "overview": "Identity, stationery and campus wayfinding for the Universidad Tecnológica de Pereira: a folded, multicolour UTP monogram and a geometric system that make a large public university feel open, modern and easy to navigate.",
+      "challenge": "A university speaks to everyone at once: prospective students, researchers, staff, visitors and the wider region. UTP needed an identity with the authority of a major institution and the energy of a technology school, one that scales from a business card to a building facade, and a campus that thousands of people can find their way around without having to ask for directions.",
+      "solution": "The UTP monogram is built like folded paper: ribbons of lime, green, blue, red and orange turn the three letters into one continuous form, technical, energetic and unmistakable at any size. Those same folds break out into a system of origami-like triangles that frame business cards and letterheads, so every piece of correspondence carries the identity without crowding the message. On campus the system becomes wayfinding: tall bilingual directory totems with oversized building numbers, colour-coded floor tags and clear listings let students and visitors find any office, lab or classroom at a glance. From the stone sign at the entrance to the rector's letterhead, the whole university looks and feels like one place.",
+      "deliverables": ["Logo", "Geometric graphic system", "Business cards", "Letterhead", "Wayfinding & building signage"],
+      "cover": { "src": "assets/img/work/utp/cover.jpg", "width": 1200, "height": 896, "alt": "UTP logo: lime, green, blue, red and orange ribbons folded into the letters UTP above the Universidad Tecnológica de Pereira wordmark" },
+      "gallery": [
+        { "type": "image", "src": "assets/img/work/utp/01.jpg", "width": 1200, "height": 896, "alt": "Universidad Tecnológica de Pereira building facade and stone entrance sign, both carrying the multicolour folded UTP logo", "caption": "Facade & entrance sign" },
+        { "type": "image", "src": "assets/img/work/utp/02.jpg", "width": 1200, "height": 896, "alt": "UTP business cards, front and back, framed by multicolour origami-like triangles", "caption": "Business cards" },
+        { "type": "image", "src": "assets/img/work/utp/03.jpg", "width": 1200, "height": 896, "alt": "UTP letterhead with the logo and geometric triangle accents in its corners", "caption": "Letterhead" },
+        { "type": "image", "src": "assets/img/work/utp/04.jpg", "width": 1200, "height": 896, "alt": "Burgundy directory totem for Building 13 on the UTP campus, listing offices block by block", "caption": "Wayfinding // Building 13" },
+        { "type": "image", "src": "assets/img/work/utp/05.jpg", "width": 1200, "height": 896, "alt": "White directory totem for Building 3 with an oversized red number and colour-coded floor listings", "caption": "Wayfinding // Building 3" }
       ]
     },
     {
