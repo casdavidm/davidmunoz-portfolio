@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>David Muñoz — Senior Brand &amp; UI/UX Art Director, Toronto</title>
+  <meta name="description" content="Portfolio of David Muñoz, a Toronto-based senior graphic designer and art director with 14+ years across brand systems, UX/UI and editorial design.">
+  <meta name="theme-color" content="#111827">
+  <link rel="canonical" href="https://davidmunoz.ca/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://davidmunoz.ca/">
+  <meta property="og:title" content="David Muñoz — Strategic Branding &amp; Digital Systems">
+  <meta property="og:description" content="Brand systems, UX/UI and editorial design from Toronto. 14+ years in practice.">
+  <meta property="og:image" content="https://davidmunoz.ca/assets/img/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/saira-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jetbrains-mono-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="data/projects.json" as="fetch" type="application/json" crossorigin>
+
+  <!-- Boot sequence runs once per session; skipped for reduced motion. -->
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add('js');
+      try {
+        if (!sessionStorage.getItem('dm-booted') && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          d.classList.add('is-booting');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <script type="module" src="js/main.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "David Muñoz",
+    "jobTitle": "Senior Graphic Designer & Art Director",
+    "url": "https://davidmunoz.ca/",
+    "address": { "@type": "PostalAddress", "addressLocality": "Toronto", "addressRegion": "ON", "addressCountry": "CA" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Jorge Tadeo Lozano University" },
+      { "@type": "CollegeOrUniversity", "name": "Fanshawe College" }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <!-- DM monogram (vector from the brand mark), reused everywhere via <use>. -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <!-- Pulls the illustration's #0F1829 backdrop just under brand navy so `lighten` erases it. -->
+    <filter id="ink-match" color-interpolation-filters="sRGB">
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1" intercept="-0.012"/>
+        <feFuncG type="linear" slope="1" intercept="-0.012"/>
+        <feFuncB type="linear" slope="1" intercept="-0.012"/>
+      </feComponentTransfer>
+    </filter>
+    <symbol id="dm-mark" viewBox="5.4 17.2 53.2 29.6">
+      <polygon fill="currentColor" points="42.96 40.39 42.94 46.61 36.74 46.61 36.73 32.79 23.46 46.61 14.88 46.6 42.93 17.38 42.97 32.03 58.42 18.08 58.42 46.61 52.23 46.61 52.22 32.06 42.96 40.39"/>
+      <path fill="currentColor" d="M25.76,32.73c-3.04-5.4-7.9-8.31-13.99-8.94v22.83s-6.19,0-6.19,0v-29.19s4.17.02,4.17.02c2.43.01,4.76.37,7.1,1.03,5.49,1.47,10.18,4.85,13.34,9.67l-4.42,4.6Z"/>
+    </symbol>
+  </svg>
+
+  <a class="skip-link" href="#work">Skip to selected work</a>
+
+  <!-- ================================================================
+       BOOT SEQUENCE (first visit per session)
+       ================================================================ -->
+  <div class="boot on-dark" data-boot aria-hidden="true">
+    <div class="boot__inner">
+      <svg class="boot__mark"><use href="#dm-mark"/></svg>
+      <p class="boot__title mono">DM-OS // v4.0 <span class="jp">起動中</span></p>
+      <div class="boot__bar"><span data-boot-bar></span></div>
+      <div class="boot__row mono"><span data-boot-pct>000%</span><span>Tap or press any key to skip</span></div>
+      <ol class="boot__log mono" role="list" data-boot-log></ol>
+    </div>
+  </div>
+
+  <!-- ================================================================
+       NAVIGATION — mark left, three links, the mascot tab hanging from the top edge
+       ================================================================ -->
+  <header class="nav">
+    <a class="nav__brand" href="#top" aria-label="David Muñoz, back to top">
+      <svg class="nav__mark" aria-hidden="true"><use href="#dm-mark"/></svg>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#work" data-nav="work">Work</a>
+      <a href="#specs" data-nav="specs">Specs</a>
+      <a href="#contact" data-nav="contact">Contact</a>
+    </nav>
+
+    <div class="nav__right">
+      <button class="nav__menu mono" type="button" popovertarget="menu" data-menu-trigger>Menu <span class="burger" aria-hidden="true"></span></button>
+      <button class="hud-trigger" type="button" popovertarget="hud-mini" data-hud-trigger data-state="idle">
+        <span class="hud-trigger__face" aria-hidden="true"><img src="assets/img/mascot/helmet-front.png" alt="" width="36" height="42"></span>
+        <span class="visually-hidden">Open mascot HUD</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="menu on-dark" id="menu" popover role="dialog" aria-label="Menu">
+    <div class="menu__head mono">
+      <span>Nav // <span class="jp">案内</span></span>
+      <button type="button" popovertarget="menu" popovertargetaction="hide">Close ×</button>
+    </div>
+    <nav class="menu__links" aria-label="Mobile">
+      <a href="#work" data-cmd="nav"><span class="mono">01</span>Work<span class="jp">作品</span></a>
+      <a href="#specs" data-cmd="nav"><span class="mono">02</span>Specs<span class="jp">仕様</span></a>
+      <a href="#contact" data-cmd="nav"><span class="mono">03</span>Contact<span class="jp">連絡</span></a>
+    </nav>
+    <p class="menu__foot mono"><span data-profile="email">casdavid@gmail.com</span><span>TOR <time data-clock>--:--:--</time></span></p>
+  </div>
+
+  <!-- Command HUD (popover) -->
+  <div class="hud-mini on-dark" id="hud-mini" popover role="dialog" aria-label="Mascot HUD" data-state="idle">
+    <span class="reg reg--tl" aria-hidden="true">+</span>
+    <span class="reg reg--tr" aria-hidden="true">+</span>
+    <span class="reg reg--bl" aria-hidden="true">+</span>
+    <span class="reg reg--br" aria-hidden="true">+</span>
+    <div class="hud-mini__head mono">
+      <span>Unit // DM-01</span>
+      <span class="hud-status"><span class="led" aria-hidden="true"></span><span data-hud-state>Online</span></span>
+    </div>
+    <div class="hud-mini__body">
+      <div class="hud-mini__face"><img src="assets/img/mascot/helmet-front.png" alt="" width="80" height="93"></div>
+      <p class="hud-mini__tx mono"><span class="tx-tag">TX&gt;</span> <span data-hud-text>Boot sequence OK</span><span class="caret" aria-hidden="true"></span></p>
+    </div>
+    <div class="hud-mini__cmds">
+      <a class="cmd" href="#work" data-cmd="nav">[01] Work <span aria-hidden="true">-&gt;</span></a>
+      <a class="cmd" href="#specs" data-cmd="nav">[02] Specs <span aria-hidden="true">-&gt;</span></a>
+      <a class="cmd" href="#contact" data-cmd="nav">[03] Contact <span aria-hidden="true">-&gt;</span></a>
+      <button class="cmd" type="button" data-cmd="copy-email"><span data-copy-label>Copy email</span> <span aria-hidden="true">[C]</span></button>
+    </div>
+    <div class="hud-mini__foot mono">
+      <span>TOR <time data-clock>--:--:--</time></span>
+      <button type="button" popovertarget="hud-mini" popovertargetaction="hide">[Esc] Close</button>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- ==============================================================
+         HERO — one subject: the android over the DM mark
+         ============================================================== -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__stage" data-hero-stage>
+        <svg class="hero__mark" aria-hidden="true"><use href="#dm-mark"/></svg>
+        <div class="hero__lens" data-hud-feed hidden></div>
+        <img class="hero__figure" src="assets/img/mascot/android-1100.png"
+             srcset="assets/img/mascot/android-640.png 469w, assets/img/mascot/android-1100.png 807w"
+             sizes="(max-width: 760px) 90vw, 46vw" width="807" height="1100" fetchpriority="high"
+             alt="David's android mascot: a figure in a white techwear jacket wearing a glossy navy-visored helmet marked DM">
+      </div>
+
+      <div class="hero__intro">
+        <h1 class="hero__title" id="hero-title">
+          <span class="visually-hidden">David Muñoz — </span>
+          <span class="hero__role">Brand &amp; digital systems — ©<span data-year>2026</span></span>
+        </h1>
+        <p class="hero__jp jp" lang="ja" aria-hidden="true">戦略的ブランディング</p>
+        <div class="hero__dots" role="group" aria-label="Mascot feed">
+          <button class="chan" type="button" aria-pressed="true" data-channel="still"><span class="visually-hidden">CH.01 still frame</span></button>
+          <button class="chan" type="button" aria-pressed="false" data-channel="loop-a"
+                  data-src="assets/videome5.mp4" data-poster="assets/img/mascot/loop-a-poster.jpg"><span class="visually-hidden">CH.02 loop</span></button>
+          <button class="chan" type="button" aria-pressed="false" data-channel="loop-b"
+                  data-src="assets/videoheaderdance.mp4" data-poster="assets/img/mascot/loop-b-poster.jpg"><span class="visually-hidden">CH.03 loop</span></button>
+        </div>
+      </div>
+
+      <p class="hero__label label mono">Art director<br>Toronto, ON<br><span data-stat="cases">11</span> case files</p>
+
+      <p class="hero__note mono">Brand systems, UX/UI and editorial design.<br><span data-profile="experience">14+</span> years in practice // Est. 2012</p>
+
+      <p class="hero__vert jp" lang="ja" aria-hidden="true">ダビッド・ムニョス</p>
+
+      <a class="corner-arrow hero__next" href="#work" data-snap-to="#work" aria-label="Scroll to selected work">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5v12.5M2.5 8.5 8 14l5.5-5.5"/></svg>
+      </a>
+    </section>
+
+    <!-- ==============================================================
+         01 — SELECTED WORK
+         ============================================================== -->
+    <section class="section work" id="work" aria-labelledby="work-title">
+      <div class="section__head">
+        <p class="label mono" aria-hidden="true">01 — Selected work<br><span class="jp">作品</span> 2012—2026</p>
+        <h2 class="statement" id="work-title">Selected <span class="statement__accent">case files</span></h2>
+        <p class="section__aside">Brand architecture, editorial systems and digital interfaces, built with Swiss typographic precision. Open a file for the full breakdown.</p>
+      </div>
+
+      <div class="filters" role="toolbar" aria-label="Filter case files by discipline" aria-controls="work-grid" data-filters></div>
+
+      <ul class="tiles" id="work-grid" role="list" data-grid>
+        <li class="tile tile--end"><p class="mono">Loading case files…</p></li>
+      </ul>
+      <p class="visually-hidden" aria-live="polite" data-grid-status></p>
+    </section>
+
+    <!-- ==============================================================
+         02 — SPECS
+         ============================================================== -->
+    <section class="section specs" id="specs" aria-labelledby="specs-title">
+      <div class="section__head section__head--compact">
+        <p class="label mono" aria-hidden="true">02 — Specs<br><span class="jp">仕様</span> Rev. <span data-rev>2026.11</span></p>
+        <h2 class="visually-hidden" id="specs-title">Experience and capabilities</h2>
+      </div>
+
+      <div class="specs__grid">
+        <div class="specs__intro">
+          <p class="specs__num" aria-label="14 plus years"><span data-profile="experienceYears">14</span><span class="specs__plus" aria-hidden="true"></span></p>
+          <p class="specs__cap mono">Years in practice <span class="jp">経験</span></p>
+          <p class="specs__lede">I blend creativity with strategy to turn concepts into compelling visual communication — cohesive assets across print, advertising, digital and social, built around purposeful brand stories.</p>
+          <dl class="facts" data-facts></dl>
+          <p class="specs__kanji jp-display" aria-hidden="true">経験値</p>
+        </div>
+
+        <div class="caps">
+          <h3 class="caps__head mono">Capabilities</h3>
+          <ol class="caps__list" role="list" data-caps></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================================
+         03 — CONTACT (yellow)
+         ============================================================== -->
+    <section class="uplink theme-signal" id="contact" aria-labelledby="contact-title">
+      <div class="uplink__grid">
+        <div class="uplink__content">
+          <p class="label mono" aria-hidden="true">03 — Contact<br><span class="jp">連絡</span> Toronto, ON</p>
+          <h2 class="statement" id="contact-title">Send the <span class="statement__accent">brief.</span></h2>
+          <p class="uplink__avail" data-profile="availability">Currently available for freelance projects. Email for inquiries.</p>
+
+          <a class="uplink__cta" href="mailto:casdavid@gmail.com" data-profile-mailto>
+            <span data-profile="email">casdavid@gmail.com</span>
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 8h12.5M8.5 2.5 14 8l-5.5 5.5"/></svg>
+          </a>
+
+          <ul class="uplink__links mono" role="list">
+            <li><a href="https://www.linkedin.com/in/davidmunozdesigner/" data-profile-href="linkedin" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://www.instagram.com/davidmunoz.ca/" data-profile-href="instagram" target="_blank" rel="noopener">Instagram <span aria-hidden="true">↗</span></a></li>
+            <li><button type="button" data-cmd="copy-email"><span data-copy-label>Copy email</span></button></li>
+          </ul>
+        </div>
+
+        <figure class="uplink__unit" aria-hidden="true">
+          <svg class="uplink__reticle" viewBox="-100 -100 200 200">
+            <g class="ret-spin">
+              <circle r="98" class="ret ret--hair"/>
+              <path class="ret ret--arc" d="M 92.1 33.5 A 98 98 0 0 1 33.5 92.1"/>
+            </g>
+            <circle r="70" class="ret-disc"/>
+          </svg>
+          <img class="uplink__helmet" src="assets/img/mascot/helmet-side.jpg" alt="" width="1100" height="1019" loading="lazy" decoding="async">
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="mono">© <span data-year>2026</span> David Muñoz</p>
+    <p class="mono footer__mid"><span class="jp" lang="ja">トロント</span> 43.65°N 79.38°W</p>
+    <a class="footer__top mono" href="#top">Back to top ↑</a>
+  </footer>
+
+  <!-- ================================================================
+       CASE FILE DRAWER
+       ================================================================ -->
+  <dialog class="drawer" id="case-drawer" aria-labelledby="case-title">
+    <div class="drawer__scrim" data-drawer-dismiss></div>
+    <div class="drawer__panel">
+      <header class="drawer__head on-dark">
+        <p class="drawer__crumb mono" data-drawer-crumb>Case file</p>
+        <button class="drawer__btn" type="button" data-drawer-step="-1" aria-label="Previous case file"><span aria-hidden="true">&lt;-</span><span class="drawer__btn-label">Prev</span></button>
+        <button class="drawer__btn" type="button" data-drawer-step="1" aria-label="Next case file"><span class="drawer__btn-label">Next</span><span aria-hidden="true">-&gt;</span></button>
+        <button class="drawer__btn drawer__btn--close" type="button" data-drawer-dismiss aria-label="Close case file">[Esc] <span class="drawer__btn-label">Close</span> <span aria-hidden="true">×</span></button>
+      </header>
+      <div class="drawer__body" data-drawer-body tabindex="-1"></div>
+    </div>
+  </dialog>
+
+  <noscript>
+    <p class="noscript">[ERR] JavaScript is disabled. Case files are rendered from data/projects.json. Enable JavaScript to browse the portfolio.</p>
+  </noscript>
+</body>
+</html>

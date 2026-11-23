@@ -1,0 +1,331 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-11-22",
+
+  "profile": {
+    "name": "David Muñoz",
+    "role": "Senior Graphic Designer & Art Director",
+    "headline": "Strategic branding & digital systems.",
+    "experienceYears": 14,
+    "location": {
+      "city": "Toronto",
+      "region": "ON",
+      "country": "Canada",
+      "lat": 43.6532,
+      "lng": -79.3832,
+      "timezone": "America/Toronto"
+    },
+    "languages": ["EN", "ES"],
+    "status": "Available for freelance",
+    "availability":"Currently available for freelance projects. Email for inquiries.",
+    "contact": {
+      "email": "casdavid@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/davidmunozdesigner/",
+      "instagram": "https://www.instagram.com/davidmunoz.ca/"
+    },
+    "education": [
+      { "label": "B.A. Graphic Design", "school": "Jorge Tadeo Lozano University" },
+      { "label": "Continuing Education", "school": "Fanshawe College" }
+    ]
+  },
+
+  "disciplines": [
+    { "id": "brand", "label": "Brand Systems", "jp": "ブランド" },
+    { "id": "digital", "label": "UX/UI & Digital", "jp": "デジタル" },
+    { "id": "motion", "label": "Motion", "jp": "映像" },
+    { "id": "editorial", "label": "Editorial", "jp": "編集" }
+  ],
+
+  "filters": [
+    { "id": "all", "label": "All", "jp": "全件", "match": [] },
+    { "id": "brand", "label": "Brand Systems", "jp": "ブランド", "match": ["brand"] },
+    { "id": "digital", "label": "UX/UI & Digital", "jp": "デジタル", "match": ["digital"] },
+    { "id": "motion-editorial", "label": "Motion & Editorial", "jp": "映像・編集", "match": ["motion", "editorial"] }
+  ],
+
+  "capabilities": [
+    {
+      "code": "CAP.01",
+      "label": "Brand Systems & Identity",
+      "scope": "Marks, symbols, colour and type systems, stationery, uniforms and collateral built to scale across every touchpoint.",
+      "match": ["brand"]
+    },
+    {
+      "code": "CAP.02",
+      "label": "UX/UI & Digital",
+      "scope": "E-commerce heroes, responsive websites and interface systems that carry brand energy through to conversion.",
+      "match": ["digital"]
+    },
+    {
+      "code": "CAP.03",
+      "label": "Motion",
+      "scope": "Motion reels and animated brand moments.",
+      "match": ["motion"]
+    },
+    {
+      "code": "CAP.04",
+      "label": "Editorial & Print",
+      "scope": "Book covers, brochures and print layouts with Swiss typographic discipline.",
+      "match": ["editorial"]
+    },
+    {
+      "code": "CAP.05",
+      "label": "Packaging",
+      "scope": "Retail and takeout packaging that extends the identity into the customer's hands.",
+      "matchTags": ["packaging"]
+    },
+    {
+      "code": "CAP.06",
+      "label": "Photography",
+      "scope": "Brand and product photography.",
+      "match": []
+    },
+    {
+      "code": "CAP.07",
+      "label": "AI-Assisted Workflows",
+      "scope": "Automation and AI tooling across the design pipeline.",
+      "match": []
+    }
+  ],
+
+  "projects": [
+    {
+      "slug": "psychostart",
+      "title": "PsychoStart",
+      "client": "PsychoStart Running Shoes",
+      "category": "UX/UI & Branding",
+      "disciplines": ["digital", "brand"],
+      "tags": ["packaging"],
+      "year": "2012 / 2025",
+      "sector": "Athletic Footwear",
+      "status": "published",
+      "summary": "A running-shoe brand built to look fast, from the emblem to the launch-day storefront.",
+      "overview": "Identity and launch storefront for PsychoStart Running Shoes: a brand designed in 2012 to read as speed at a glance, then brought online in 2025 for the debut of the Velocity 1.0 runner.",
+      "challenge": "A new running brand has seconds to prove it belongs next to the big names. PsychoStart needed an identity that reads as speed and grit from across a store aisle, and a product page that carries the same energy online without getting in the way of the sale.",
+      "solution": "A lightning-struck “P” emblem and a bold wordmark set the pace, backed by a forest-and-lime palette and the rallying line “Ignite your run.” The system runs from tongue and insole logos to shoe boxes, a “Built to run, made to win” stamp and retail displays. For the Velocity 1.0 launch, the storefront hero puts the shoe front and centre over a giant wordmark, with an inline colourway switcher (Forest, Lime and Black), a clear price and add-to-cart, and drop alerts that turn a release date into an event.",
+      "deliverables": ["Emblem & wordmark", "Colour & type system", "Tagline & brand stamp", "Product branding", "Shoe-box packaging", "Retail display", "E-commerce storefront hero", "Colourway switcher", "Drop-alert notifications"],
+      "cover": { "src": "assets/img/work/psychostart/cover.jpg", "width": 960, "height": 720, "alt": "PsychoStart lightning \"P\" emblem and wordmark on forest green" },
+      "gallery": [
+        { "type": "image", "src": "assets/img/work/psychostart/02.jpg", "width": 1604, "height": 1202, "alt": "PsychoStart storefront hero with the lime Velocity 1.0 shoe, price and colourway switcher", "caption": "Storefront hero // Lime colourway" },
+        { "type": "image", "src": "assets/img/work/psychostart/03.jpg", "width": 1590, "height": 1192, "alt": "PsychoStart storefront hero with the black Velocity 1.0 shoe", "caption": "Storefront hero // Black colourway" },
+        { "type": "image", "src": "assets/img/work/psychostart/04.jpg", "width": 1800, "height": 1800, "alt": "PsychoStart brand board: emblem, product logos, stamp, packaging, website, drop alert and slogan", "caption": "Brand system overview" },
+        { "type": "image", "src": "assets/img/work/psychostart/05.jpg", "width": 1800, "height": 1800, "alt": "PsychoStart shoe boxes and the Velocity 1.0 in front of an \"Ignite\" retail banner", "caption": "Packaging & retail display" },
+        { "type": "image", "src": "assets/img/work/psychostart/06.jpg", "width": 1800, "height": 1800, "alt": "PsychoStart storefront hero with the forest-green Velocity 1.0 shoe", "caption": "Storefront hero // Forest colourway" }
+      ]
+    },
+    {
+      "slug": "ledn",
+      "title": "Ledn",
+      "client": "Ledn",
+      "category": "Motion Reel",
+      "disciplines": ["motion"],
+      "tags": [],
+      "year": "2021",
+      "sector": "Fintech",
+      "status": "published",
+      "monogram": "LDN",
+      "summary": "Launch animations and kinetic type that make bitcoin finance easy to follow.",
+      "overview": "Motion design for Ledn, the bitcoin financial services company: product launches, newsletter promos and a fast, meme-literate kinetic-type series that makes crypto jargon easy to follow and hard to scroll past.",
+      "challenge": "Bitcoin finance is loud, technical and full of jargon. Ledn needed motion that could launch new products with confidence, explain them in seconds and still feel native in fast-moving social feeds, without losing the trust a financial brand depends on.",
+      "solution": "Two registers, one system. For product moments, from the B2X launch to BTC and USDC trading and the weekly newsletter, clean animations built on Ledn's teal palette and glowing coin icons keep the message calm and credible: instant trades, no fees, earn interest. For social, a high-energy kinetic-type series cuts crypto vocabulary like Multisig, UTXO, HODL and Proof of Reserves into punchy, meme-literate edits that teach while they entertain. The result is a brand that sounds credible on the product page and fluent in the feed.",
+      "deliverables": ["Product launch animations", "Logo animations", "Kinetic typography series", "Social video edits", "Newsletter promo"],
+      "cover": { "src": "assets/img/work/ledn/cover.jpg", "width": 1446, "height": 1227, "alt": "Frames from the Ledn motion reel: B2X and Ledn logo animations, a trading launch title and kinetic crypto type" },
+      "hero": { "type": "embed", "src": "https://www.youtube-nocookie.com/embed/yjeiUIoYnB0?rel=0&playsinline=1", "poster": "assets/img/work/ledn/poster.jpg", "width": 1280, "height": 720, "duration": "01:47", "title": "Ledn motion reel", "caption": "Motion reel" },
+      "gallery": []
+    },
+    {
+      "slug": "simplicare",
+      "title": "SimpliCare",
+      "client": "SimpliCare Medical Clinics",
+      "category": "Brand System",
+      "disciplines": ["brand"],
+      "tags": [],
+      "year": "2024",
+      "sector": "Healthcare",
+      "status": "published",
+      "summary": "A clinic brand that feels calm, clear and trustworthy from the street to the front desk.",
+      "overview": "Brand identity for SimpliCare Medical Clinics: a calm, confident system that tells patients they're in good hands before they walk through the door.",
+      "challenge": "Clinics often look either cold or generic. SimpliCare needed to signal medical competence and modern efficiency while feeling warm and approachable to patients who may arrive anxious.",
+      "solution": "A clean, rounded wordmark puts care at the centre: the “i” in the middle of the name is set in olive to single out the individual patient. Deep navy brings authority, olive and soft neutrals bring warmth, and the type stays legible at every size. The system is built for the real world: a navy storefront with dimensional lettering that reads from across the street, premium business cards and stationery, and branded pens for the front desk, with the same palette and type carried into digital.",
+      "deliverables": ["Wordmark", "Colour palette", "Typography system", "Storefront signage", "Business cards & stationery", "Branded merchandise", "Digital applications"],
+      "cover": { "src": "assets/img/work/simplicare/cover.jpg", "width": 960, "height": 626, "alt": "SimpliCare Medical Clinics wordmark on deep navy" },
+      "gallery": [
+        { "type": "image", "src": "assets/img/work/simplicare/01.jpg", "width": 1800, "height": 1116, "alt": "SimpliCare pens in navy and white with gold trim", "caption": "Branded pens" },
+        { "type": "image", "src": "assets/img/work/simplicare/02.jpg", "width": 1800, "height": 1488, "alt": "SimpliCare business cards, navy front and white back", "caption": "Business cards" },
+        { "type": "image", "src": "assets/img/work/simplicare/03.jpg", "width": 1800, "height": 1800, "alt": "SimpliCare clinic storefront with a navy facade and dimensional lettering", "caption": "Storefront signage" }
+      ]
+    },
+    {
+      "slug": "expariences",
+      "title": "Expariences",
+      "client": "Expariences — Éducation Holistique",
+      "category": "Identity",
+      "disciplines": ["brand"],
+      "tags": ["packaging"],
+      "year": "2025",
+      "sector": "Holistic Education",
+      "status": "published",
+      "summary": "A sun-and-moon identity that makes a holistic practice feel grounded and credible.",
+      "overview": "Identity for Expariences, a French-language holistic education practice: a sun-and-moon symbol and a warm, earthy palette that make a spiritual practice feel grounded, trustworthy and easy to say yes to.",
+      "challenge": "Holistic services run on trust. Expariences needed to express its mystical, nature-led philosophy without tipping into cliché, and to look professional enough for clients to commit to a full programme.",
+      "solution": "A sun cradling a crescent moon captures balance in a single line-drawn mark, paired with a refined serif wordmark. Forest green and gold anchor the palette, with terracotta and ochre accents for warmth. The system extends to the tools of the practice itself: a weekly intentions agenda, client agreements and letterhead, business cards and envelopes, buttons and a branded tee, so every touchpoint feels as considered as the sessions.",
+      "deliverables": ["Symbol & wordmark", "Colour palette & typography", "Weekly agenda", "Stationery & client agreements", "Business cards", "Merchandise"],
+      "cover": { "src": "assets/img/work/expariences/cover.jpg", "width": 773, "height": 960, "alt": "Expariences sun-and-moon symbol and wordmark" },
+      "gallery": [
+        { "type": "image", "src": "assets/img/work/expariences/01.jpg", "width": 1439, "height": 1800, "alt": "Expariences green and gold agenda with an open weekly planner and buttons", "caption": "Weekly intentions agenda" },
+        { "type": "image", "src": "assets/img/work/expariences/02.jpg", "width": 928, "height": 1152, "alt": "Forest-green Expariences t-shirt with the gold sun-and-moon symbol", "caption": "Branded tee" },
+        { "type": "image", "src": "assets/img/work/expariences/03.jpg", "width": 1440, "height": 1800, "alt": "Expariences letterhead, client agreement, envelope and business cards", "caption": "Stationery & client agreements" }
+      ]
+    },
+    {
+      "slug": "the-tire-terminal",
+      "title": "The Tire Terminal",
+      "client": "The Tire Terminal",
+      "category": "Event & Corporate Branding",
+      "disciplines": ["brand", "editorial"],
+      "tags": [],
+      "year": "2023",
+      "sector": "Automotive",
+      "status": "published",
+      "monogram": "TTT",
+      "summary": "Roll-ups, a tire-care brochure and social for the GTA's tire superstore.",
+      "overview": "Event and marketing collateral for The Tire Terminal, the GTA's tire superstore since 2001: one confident red-and-black system that earns the trust of fleet managers and everyday drivers alike.",
+      "challenge": "Sell to two very different buyers, owner-operators running commercial fleets and drivers shopping for their own car, without splitting the brand in two. And turn dense technical tire knowledge into something customers actually want to read.",
+      "solution": "A bold red-and-black system anchored by the Tire Terminal mark and a consistent set of line icons. Two roll-up banners split the offer by audience: commercial tires, 24/7 road service and fleet management on one; passenger tires, custom wheels and seasonal storage on the other, both closing with the partner brands as proof of range. “The Roundup”, a tri-fold guide, explains sizing codes, wheel and tire anatomy and routine maintenance in clear illustrated panels the counter team can hand to every customer. Social templates for reviews, seasonal promotions and hiring carry the same voice online, so the showroom, the trade-show booth and the feed all read as one trusted business.",
+      "deliverables": ["Tri-fold brochure", "Roll-up banners", "Social media templates"],
+      "cover": { "src": "assets/img/work/the-tire-terminal/cover.jpg", "width": 1200, "height": 896, "alt": "The Roundup, a tri-fold tire-care brochure for The Tire Terminal, shown open on both sides" },
+      "gallery": [
+        { "type": "image", "src": "assets/img/work/the-tire-terminal/01.jpg", "width": 1200, "height": 896, "alt": "Two Tire Terminal roll-up banners, one for commercial fleets and one for passenger drivers", "caption": "Roll-up banners: fleet & retail" },
+        { "type": "image", "src": "assets/img/work/the-tire-terminal/02.jpg", "width": 1200, "height": 896, "alt": "Tire Terminal social posts: a customer review, an Easter promotion and a hiring ad", "caption": "Social media templates" }
+      ]
+    },
+    {
+      "slug": "patlon",
+      "title": "Patlon",
+      "client": "Patlon Enterprises",
+      "category": "Corporate Identity",
+      "disciplines": ["brand", "digital"],
+      "tags": [],
+      "year": "2022",
+      "sector": "Aerospace",
+      "status": "published",
+      "summary": "An aviation identity and website that make a ground-support supplier look world-class.",
+      "overview": "Brand identity and website for Patlon, a supplier of aviation ground-support equipment: a confident yellow-on-slate system that looks as dependable as the machines it sells.",
+      "challenge": "In aviation, buyers choose suppliers they trust with safety-critical equipment. Patlon needed a brand that projects precision and reliability to airports worldwide, and a website that turns that trust into quote requests.",
+      "solution": "A “P” mark with an aircraft cut into its negative space, set in aviation yellow on deep slate, reads instantly at any size, from a pen to a uniform. The responsive website leads with a clear promise, “Ground Support Equipment, Engineered for Aviation”, backs it with proof points (24/7 global support, certified to aviation standards, 20+ years trusted by airports) and gives buyers two direct paths: explore products or request a quote. Stationery and uniforms carry the same system from the office to the apron.",
+      "deliverables": ["Logo", "Colour & type system", "Business cards & stationery", "Uniforms", "Responsive website"],
+      "cover": { "src": "assets/img/work/patlon/cover.jpg", "width": 960, "height": 640, "alt": "Patlon business cards with the yellow P airplane mark on black and white stock" },
+      "gallery": [
+        { "type": "image", "src": "assets/img/work/patlon/01.jpg", "width": 1800, "height": 1111, "alt": "Patlon pens with the yellow P airplane mark", "caption": "Branded pens" },
+        { "type": "image", "src": "assets/img/work/patlon/02.jpg", "width": 1800, "height": 1161, "alt": "Patlon website on a laptop: ground support equipment hero with quote request", "caption": "Responsive website" },
+        { "type": "image", "src": "assets/img/work/patlon/03.jpg", "width": 1800, "height": 1012, "alt": "Patlon P airplane mark and wordmark in yellow on deep slate", "caption": "Logo" }
+      ]
+    },
+    {
+      "slug": "sheridan-seating",
+      "title": "Sheridan Seating",
+      "client": "Sheridan Seating Inc.",
+      "category": "Brand System",
+      "disciplines": ["brand"],
+      "tags": ["packaging"],
+      "year": "2023",
+      "sector": "Seating",
+      "status": "published",
+      "summary": "A brand built on strength, durability and comfort for telescopic seating and stages.",
+      "overview": "Brand system for Sheridan Seating Inc., maker of telescopic bleachers and retractable stages: one bold navy-and-orange identity that sells engineering to schools, arenas and theatres.",
+      "challenge": "Seating is a high-stakes purchase judged on engineering, safety and longevity, but the people who sign off are rarely engineers. Sheridan needed to look as solid as its product and explain complex systems clearly across sales, print and digital.",
+      "solution": "A sunburst “S”, its rays evoking tiered rows and stage lights, pairs with a heavy, confident wordmark in navy and orange. A custom icon set explains configurations at a glance, and the line “Strength. Durability. Comfort.” gives sales one clear promise. The system runs across stationery, product brochures such as the Applaud™ Bleacher System, technical stage drawings, shipping packaging, a product app and social content, so every touchpoint reinforces the same engineered quality.",
+      "deliverables": ["Logo & sunburst motif", "Icon set", "Tagline & typography", "Stationery", "Product brochures", "Packaging", "App UI", "Social media content"],
+      "cover": { "src": "assets/img/work/sheridan-seating/cover.jpg", "width": 960, "height": 960, "alt": "Sheridan Seating brand board: logo, icons, stationery, stage drawing, packaging, app and brochures" },
+      "gallery": [
+        { "type": "image", "src": "assets/img/work/sheridan-seating/01.jpg", "width": 1800, "height": 1200, "alt": "Sheridan Seating Instagram posts for retractable stages on three phones", "caption": "Social content" },
+        { "type": "image", "src": "assets/img/work/sheridan-seating/02.jpg", "width": 1800, "height": 1199, "alt": "Sheridan Seating brochure spreads, including the Applaud Bleacher System", "caption": "Product brochures" },
+        { "type": "image", "src": "assets/img/work/sheridan-seating/03.jpg", "width": 1800, "height": 1440, "alt": "Sheridan Seating sunburst S logo in navy and orange", "caption": "Logo" }
+      ]
+    },
+    {
+      "slug": "caitlyns-cakes",
+      "title": "Caitlyn's Cakes",
+      "client": "Caitlyn's Cakes Bakery",
+      "category": "Packaging & Branding",
+      "disciplines": ["brand"],
+      "tags": ["packaging"],
+      "year": "2022",
+      "sector": "Bakery",
+      "status": "published",
+      "summary": "A sweet mint-and-pink bakery brand that turns every takeout order into a gift.",
+      "overview": "Brand identity and packaging for Caitlyn's Cakes Bakery: a playful mint-and-pastel system designed so every box, bag and cup that leaves the counter sells the bakery all over again.",
+      "challenge": "A neighbourhood bakery competes on delight. Caitlyn's needed a look as tempting as its cupcakes, one that stands out on the counter and keeps working on the street, at the office and on social feeds after the sale.",
+      "solution": "A hand-lettered script wordmark and a cheerful cupcake icon set the tone, in a mint, pink and buttery-yellow palette that feels fresh and indulgent. The packaging does the selling: windowed takeout boxes put the cupcakes on display, while kraft cup sleeves and mint carry bags turn every coffee and order into a small advertisement for the bakery.",
+      "deliverables": ["Logo & cupcake icon", "Colour palette", "Windowed takeout boxes", "Cup sleeves", "Carry bags"],
+      "cover": { "src": "assets/img/work/caitlyns-cakes/cover.jpg", "width": 960, "height": 960, "alt": "Caitlyn's Cakes script logo and cupcake icon on mint" },
+      "gallery": [
+        { "type": "image", "src": "assets/img/work/caitlyns-cakes/01.jpg", "width": 1800, "height": 1800, "alt": "Mint coffee cup with a kraft Caitlyn's Cakes sleeve", "caption": "Cup sleeve" },
+        { "type": "image", "src": "assets/img/work/caitlyns-cakes/02.jpg", "width": 1800, "height": 1800, "alt": "Mint Caitlyn's Cakes takeout box with a window showing chocolate cupcakes", "caption": "Windowed takeout box" },
+        { "type": "image", "src": "assets/img/work/caitlyns-cakes/03.jpg", "width": 1800, "height": 922, "alt": "Mint Caitlyn's Cakes paper carry bag", "caption": "Carry bag" }
+      ]
+    },
+    {
+      "slug": "maggie-carolina",
+      "title": "Maggie Carolina",
+      "client": "Maggie Carolina Knitting & Crochet",
+      "category": "Brand Identity",
+      "disciplines": ["brand"],
+      "tags": ["packaging"],
+      "year": "2023",
+      "sector": "Handcraft",
+      "status": "published",
+      "summary": "A warm hand-drawn brand for a knitting and crochet maker, from yarn bands to webshop.",
+      "overview": "Boutique brand identity for Maggie Carolina Knitting & Crochet: a hand-drawn script and a rich burgundy palette that make handmade pieces feel premium, giftable and worth the price.",
+      "challenge": "Handmade goods are often undervalued. Maggie Carolina needed a brand that keeps the warmth of craft while looking polished enough to sell online, at markets and as gifts.",
+      "solution": "A flowing script logo with a yarn ball, needles and a heart captures handcrafted care, set in a rich burgundy, blush and cream palette. A family of icons, a round stamp and the line “Crafted with Love.” carry the brand onto embroidered patches, engraved needles and hooks, yarn bands, hang tags, gift boxes, shopping bags, project pouches and a webshop, so every piece arrives looking like a gift.",
+      "deliverables": ["Logo & icon set", "Brand stamp", "Colour palette & typography", "Packaging & yarn bands", "Hang tags & business cards", "Merchandise", "Webshop design"],
+      "cover": { "src": "assets/img/work/maggie-carolina/cover.jpg", "width": 960, "height": 960, "alt": "Maggie Carolina brand board: logo, icons, patch, business cards, packaging, webshop and lifestyle" },
+      "gallery": [
+        { "type": "image", "src": "assets/img/work/maggie-carolina/01.jpg", "width": 1694, "height": 934, "alt": "Maggie Carolina script logo with yarn ball and needles on burgundy", "caption": "Primary logo" }
+      ]
+    },
+    {
+      "slug": "drmc",
+      "title": "DRMC",
+      "client": "DRMC",
+      "category": "Brand Identity",
+      "disciplines": ["brand"],
+      "tags": [],
+      "year": "2014",
+      "sector": "Cleaning Services",
+      "status": "published",
+      "summary": "A fresh, dependable identity that makes a cleaning company look as spotless as the spaces it cleans.",
+      "overview": "Brand identity for DRMC, a cleaning services company: a duster-and-sun mark and a crisp navy-and-lime palette that say fresh, reliable and professional before the crew even rings the bell.",
+      "challenge": "Cleaning is a trust business. Clients hand over the keys to their homes and offices, often to people they have never met. DRMC needed to look established and dependable while still feeling fresh and approachable, and to stand apart from the clip-art mops and soap bubbles that crowd the category.",
+      "solution": "A stacked DRMC monogram in clean geometric capitals carries the authority. A lime duster sweeping past a small sun brings the freshness: the bright, just-cleaned moment built right into the logo. Deep navy says professional, lime says clean, and the pair stays sharp everywhere the brand has to work. It is embroidered on caps and polos so the team is recognised at the door, set on two-sided business cards, and carried onto invoices, where a faint duster watermark turns even the paperwork into a brand touchpoint. The result is a company that looks as organised and spotless as the spaces it leaves behind.",
+      "deliverables": ["Logo", "Colour palette", "Business cards", "Invoice template", "Uniforms"],
+      "cover": { "src": "assets/img/work/drmc/cover.jpg", "width": 1200, "height": 896, "alt": "DRMC logo: a stacked navy DRMC monogram with a lime duster and sun sweeping over the D" },
+      "gallery": [
+        { "type": "image", "src": "assets/img/work/drmc/01.jpg", "width": 1200, "height": 896, "alt": "DRMC team member in a navy cap and polo embroidered with the DRMC logo, standing in a bright, freshly cleaned living room", "caption": "Uniforms" },
+        { "type": "image", "src": "assets/img/work/drmc/02.jpg", "width": 1200, "height": 896, "alt": "Two-sided DRMC business cards: the logo reversed on navy, and contact details on white", "caption": "Business cards" },
+        { "type": "image", "src": "assets/img/work/drmc/03.jpg", "width": 1200, "height": 896, "alt": "DRMC invoice with a navy header band, lime accents and a faint duster watermark", "caption": "Invoice template" }
+      ]
+    },
+    {
+      "slug": "el-rey-en-su-reino",
+      "title": "El Rey en su Reino",
+      "client": "El Rey en su Reino — Book",
+      "category": "Editorial",
+      "disciplines": ["editorial"],
+      "tags": [],
+      "year": "2012",
+      "sector": "Publishing",
+      "status": "published",
+      "summary": "A warm, hopeful cover and interior for a Spanish-language Bible study.",
+      "overview": "Cover and interior design for “El Rey en su Reino: Herederos del Reino” by Charles Price, a Spanish-language Bible study: an inviting, uplifting book that feels like a gift before it's opened.",
+      "challenge": "Study books can look dense and intimidating on the shelf. This one needed a cover that communicates its message of generosity and inheritance at a glance, and an interior that keeps long chapters easy to read.",
+      "solution": "The cover centres on one image: open hands passing a red gift box, on a soft, light background under an elegant serif title, so the book's message lands before a page is turned. Inside, generous margins, clear chapter openers and a classic serif text face keep the parables and scripture references comfortable to read over long sessions.",
+      "deliverables": ["Book cover", "Interior layout", "Typography"],
+      "cover": { "src": "assets/img/work/el-rey-en-su-reino/cover.jpg", "width": 960, "height": 536, "alt": "El Rey en su Reino book cover held in two hands" },
+      "gallery": [
+        { "type": "image", "src": "assets/img/work/el-rey-en-su-reino/01.jpg", "width": 1800, "height": 1727, "alt": "El Rey en su Reino interior spread with a chapter opener and body text", "caption": "Interior // Chapter opener" }
+      ]
+    }
+  ]
+}

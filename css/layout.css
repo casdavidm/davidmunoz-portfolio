@@ -1,0 +1,486 @@
+/* ==========================================================================
+   LAYOUT — nav, hero, section heads, specs, contact, footer.
+   One subject per screen, a few small labels, one yellow accent.
+   ========================================================================== */
+
+@layer layout {
+  /* =====================================================================
+     NAV — mark left, three links, the helmet tab hanging from the top edge
+     ===================================================================== */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    height: var(--nav-h);
+    padding-inline: var(--gutter);
+    background: var(--bg);
+  }
+
+  .nav__brand {
+    display: flex;
+    justify-self: start;
+    text-decoration: none;
+  }
+
+  .nav__mark {
+    width: 40px;
+    height: 22px;
+    color: var(--fg);
+    transition: color var(--dur-1) linear;
+  }
+
+  .nav__brand:hover .nav__mark { color: var(--signal); }
+
+  .nav__links {
+    display: flex;
+    gap: clamp(1.75rem, 3.5vw, 3.5rem);
+  }
+
+  .nav__links a {
+    position: relative;
+    padding-block: 0.5rem;
+    color: var(--fg-70);
+    font: 500 var(--step--2) / 1 var(--font-mono);
+    letter-spacing: var(--tracking-mono);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color var(--dur-1) linear;
+  }
+
+  .nav__links a:hover,
+  .nav__links a[aria-current="true"] { color: var(--fg); }
+
+  /* Current section: a small yellow square, like the hero's feed dots */
+  .nav__links a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -0.95rem;
+    width: 5px;
+    height: 5px;
+    background: var(--signal);
+    translate: 0 -50%;
+    scale: 0;
+    transition: scale var(--dur-1) steps(2);
+  }
+
+  .nav__links a[aria-current="true"]::before { scale: 1; }
+
+  .nav__right {
+    display: flex;
+    align-self: start;
+    justify-self: end;
+    align-items: flex-start;
+    gap: 1.25rem;
+    height: 100%;
+  }
+
+  .nav__menu {
+    display: none;
+    align-self: center;
+    align-items: center;
+    gap: 0.6rem;
+    height: 40px;
+    font-weight: 600;
+  }
+
+  .burger {
+    width: 20px;
+    height: 7px;
+    border-top: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+  }
+
+  @media (max-width: 960px) {
+    .nav { grid-template-columns: 1fr auto; }
+    .nav__links { display: none; }
+    .nav__menu { display: inline-flex; }
+  }
+
+  /* =====================================================================
+     HERO — the android stands on the bottom edge in front of the DM mark.
+     Every layer is placed from the figure's geometry (container units).
+     ===================================================================== */
+  .hero {
+    position: relative;
+    height: max(620px, calc(100svh - var(--nav-h)));
+    max-height: 980px;
+    overflow: hidden;
+    container-type: size;
+    background: var(--bg);
+
+    --fig-h: 92cqh;
+    --head-x: calc(50cqw + var(--fig-h) * 0.0293);
+    --head-y: calc(100cqh - var(--fig-h) + var(--fig-h) * 0.206);
+    --ret: calc(var(--fig-h) * 0.7);
+    --mark-w: min(56cqw, calc(var(--fig-h) * 0.95));
+  }
+
+  .hero__stage {
+    position: absolute;
+    inset: 0;
+    --mx: 0.5;
+    --my: 0.5;
+  }
+
+  .hero__mark {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: calc(var(--head-y) - var(--ret) * 0.04);
+    width: var(--mark-w);
+    height: calc(var(--mark-w) / 1.797);
+    translate: -50% 0;
+    color: var(--signal);
+  }
+
+  .hero__figure {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 50%;
+    width: auto;
+    max-width: none;
+    height: var(--fig-h);
+    translate: -50% 0;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .hero__figure {
+      transform: translate(calc((var(--mx) - 0.5) * -12px), calc((var(--my) - 0.5) * -6px));
+      transition: transform 500ms var(--ease-mech);
+    }
+  }
+
+  /* CH.02 / CH.03: a round lens on the helmet plays the mascot loops */
+  .hero__lens {
+    position: absolute;
+    z-index: 3;
+    left: var(--head-x);
+    top: var(--head-y);
+    width: calc(var(--ret) * 0.64);
+    aspect-ratio: 1;
+    translate: -50% -50%;
+    overflow: hidden;
+    border-radius: 50%;
+    background: var(--bg);
+    outline: 1px solid var(--signal);
+    outline-offset: 8px;
+  }
+
+  .hero__lens video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 18%;
+  }
+
+  /* --- Copy: two-line title, JP line, feed dots ------------------------- */
+  .hero__intro {
+    position: absolute;
+    z-index: 4;
+    top: clamp(2rem, 9cqh, 6rem);
+    left: var(--gutter);
+    display: grid;
+    justify-items: start;
+    gap: 1.25rem;
+    max-width: min(30cqw, 420px);
+  }
+
+  .hero__title {
+    display: grid;
+    gap: 0.15em;
+    font-size: clamp(1.35rem, 0.8rem + 1.4vw, 2.3rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  .hero__role { font-weight: 300; }
+
+  .hero__jp {
+    color: var(--fg-70);
+    font-size: 12px;
+    letter-spacing: 0.3em;
+  }
+
+  .hero__dots {
+    display: flex;
+    gap: 0.25rem;
+    margin-top: clamp(0.5rem, 4cqh, 2.5rem);
+    margin-left: -8px; /* optical: line the first dot up with the text */
+  }
+
+  .hero__label {
+    position: absolute;
+    z-index: 4;
+    top: clamp(2rem, 9cqh, 6rem);
+    right: var(--gutter);
+    text-align: right;
+  }
+
+  .hero__label::before,
+  .hero__label::after { margin-left: auto; }
+
+  .hero__note {
+    position: absolute;
+    z-index: 4;
+    left: var(--gutter);
+    bottom: clamp(1.5rem, 6cqh, 3.5rem);
+    color: var(--fg-70);
+    line-height: 1.7;
+  }
+
+  .hero__vert {
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    right: calc(var(--gutter) * 0.5);
+    translate: 0 -50%;
+    writing-mode: vertical-rl;
+    color: var(--fg-40);
+    font-size: 11px;
+    letter-spacing: 0.5em;
+    white-space: nowrap;
+  }
+
+  .hero__next {
+    position: absolute;
+    z-index: 5;
+    right: 0;
+    bottom: 0;
+    --ca: clamp(56px, 7cqh, 76px);
+  }
+
+  @media (max-width: 1100px) {
+    .hero__vert { display: none; }
+  }
+
+  @media (max-width: 760px) {
+    .hero {
+      height: max(600px, calc(100svh - var(--nav-h)));
+      --fig-h: min(64cqh, 128cqw);
+      --mark-w: 90cqw;
+    }
+
+    .hero__intro {
+      top: 1.5rem;
+      max-width: calc(100% - 2 * var(--gutter));
+      gap: 0.9rem;
+    }
+
+    .hero__title { font-size: clamp(1.5rem, 7vw, 2rem); }
+    .hero__dots { margin-top: 0; }
+    .hero__label,
+    .hero__note { display: none; }
+
+    /* Mobile: the accent becomes a full-width bar along the bottom */
+    .hero__next {
+      left: 0;
+      --ca-w: auto;
+      --ca: 56px;
+    }
+  }
+
+  /* =====================================================================
+     SECTION HEADS — dashed label, big statement, short aside
+     ===================================================================== */
+  .section {
+    position: relative;
+    padding-block: var(--section-pad);
+  }
+
+  .section__head {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    align-items: end;
+    gap: clamp(1.5rem, 3vw, 2.5rem) var(--gutter);
+    padding-inline: var(--gutter);
+    margin-bottom: clamp(3.5rem, 7vw, 7rem);
+  }
+
+  .section__head .label { grid-column: 1 / -1; }
+  .section__head .statement { grid-column: 1 / span 9; }
+
+  .section__aside {
+    grid-column: 10 / -1;
+    max-width: 34ch;
+    color: var(--fg-70);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .section__head--compact { margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+
+  @media (max-width: 900px) {
+    .section__head .statement,
+    .section__aside { grid-column: 1 / -1; }
+  }
+
+  /* =====================================================================
+     SPECS — years + facts on the left (the 経験値 kanji as a faint outline
+     filling the foot of the column), capability index on the right
+     ===================================================================== */
+  .specs__kanji {
+    margin-top: auto;
+    padding-top: clamp(2rem, 5vw, 4rem);
+    color: transparent;
+    -webkit-text-stroke: 1px var(--fg-12);
+    font-size: clamp(5rem, 1rem + 9vw, 11.5rem);
+    line-height: 0.9;
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .specs__grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: clamp(3rem, 6vw, 5rem) var(--gutter);
+    padding-inline: var(--gutter);
+  }
+
+  .specs__intro {
+    grid-column: 1 / span 5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .specs__intro .facts { align-self: stretch; }
+
+  .caps { grid-column: 7 / -1; }
+
+  .specs__num {
+    display: flex;
+    align-items: flex-start;
+    font-weight: var(--display-weight);
+    font-size: clamp(5rem, 2rem + 10vw, 12rem);
+    line-height: 0.78;
+    letter-spacing: -0.05em;
+  }
+
+  .specs__plus {
+    position: relative;
+    flex: none;
+    width: 0.3em;
+    height: 0.3em;
+    margin: 0.02em 0 0 0.08em;
+    background: var(--signal);
+  }
+
+  .specs__plus::before,
+  .specs__plus::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 52%;
+    height: 9%;
+    background: var(--on-signal);
+    translate: -50% -50%;
+  }
+
+  .specs__plus::after { rotate: 90deg; }
+
+  .specs__cap {
+    display: flex;
+    gap: 0.75rem;
+    align-items: baseline;
+    color: var(--fg-70);
+  }
+
+  .specs__lede {
+    max-width: 44ch;
+    color: var(--fg-70);
+  }
+
+  @media (max-width: 1000px) {
+    .specs__intro,
+    .caps { grid-column: 1 / -1; }
+
+    .specs__kanji { display: none; }
+  }
+
+  /* =====================================================================
+     CONTACT — yellow panel: statement left, helmet lens right
+     ===================================================================== */
+  .uplink {
+    position: relative;
+    padding-block: var(--section-pad);
+    overflow: hidden;
+    background: var(--bg);
+    color: var(--fg);
+  }
+
+  .uplink__grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    align-items: center;
+    gap: clamp(3rem, 6vw, 5rem) var(--gutter);
+    padding-inline: var(--gutter);
+  }
+
+  .uplink__content {
+    grid-column: 1 / span 7;
+    display: grid;
+    justify-items: start;
+    gap: clamp(1.5rem, 3vw, 2.25rem);
+  }
+
+  .uplink__avail {
+    max-width: 40ch;
+    font-size: var(--step-1);
+    line-height: 1.5;
+  }
+
+  .uplink__unit {
+    position: relative;
+    grid-column: 8 / -1;
+    justify-self: end;
+    width: min(100%, 520px);
+    aspect-ratio: 1;
+    margin: 0;
+  }
+
+  @media (max-width: 900px) {
+    .uplink__content { grid-column: 1 / -1; }
+
+    .uplink__unit {
+      grid-column: 1 / -1;
+      justify-self: center;
+      width: min(100%, 380px);
+    }
+  }
+
+  /* =====================================================================
+     FOOTER
+     ===================================================================== */
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem 2rem;
+    padding: 1.75rem var(--gutter);
+    background: var(--bg);
+    color: var(--fg-70);
+  }
+
+  .footer__mid .jp { margin-right: 0.75rem; }
+
+  .footer__top {
+    color: var(--fg);
+    text-decoration: none;
+  }
+
+  .footer__top:hover { color: var(--signal); }
+
+  @media (max-width: 600px) {
+    .footer__mid { display: none; }
+  }
+}

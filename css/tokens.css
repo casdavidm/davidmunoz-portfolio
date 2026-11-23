@@ -1,0 +1,118 @@
+/* ==========================================================================
+   TOKENS — DM brand: three colours only. Every tint is a mix of these three.
+   Type: Saira (display + text) / JetBrains Mono (telemetry) /
+         Dela Gothic One + Zen Kaku Gothic New (Japanese, subset).
+   ========================================================================== */
+
+@layer tokens, base, layout, components, utilities;
+
+@font-face {
+  font-family: "Saira";
+  src: url("../assets/fonts/saira-latin-var.woff2") format("woff2");
+  font-weight: 100 900;
+  font-stretch: 50% 125%;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../assets/fonts/jetbrains-mono-latin-var.woff2") format("woff2");
+  font-weight: 100 800;
+  font-display: swap;
+}
+
+/* Japanese faces are subset to the exact glyphs used (tools/subset_jp.py). */
+@font-face {
+  font-family: "Dela Gothic One";
+  src: url("../assets/fonts/dela-gothic-one-jp.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zen Kaku Gothic New";
+  src: url("../assets/fonts/zen-kaku-gothic-new-jp.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@layer tokens {
+  :root {
+    /* --- Brand palette (literal) ------------------------------------------ */
+    --navy: #111827;
+    --yellow: #ffc61a;
+    --paper: #ffffff;
+
+    /* --- Theme roles: navy canvas, white ink ------------------------------ */
+    --bg: var(--navy);          /* canvas + dark surfaces */
+    --fg: var(--paper);         /* text, rules, inverted chips */
+    --signal: var(--yellow);    /* accent fills, brackets, arcs */
+    --on-signal: var(--navy);   /* anything sitting on the accent */
+  }
+
+  /* Signal theme — a yellow panel where every role flips:
+     yellow canvas, navy ink, navy accents with yellow text on them. */
+  .theme-signal {
+    --bg: var(--yellow);
+    --fg: var(--navy);
+    --signal: var(--navy);
+    --on-signal: var(--yellow);
+    --focus: var(--navy);
+  }
+
+  /* Derived tokens are re-resolved wherever the roles change. */
+  :root,
+  .theme-signal {
+    /* --- Derived tints (fg mixed into bg, and the reverse for white chips) - */
+    --fg-70: color-mix(in srgb, var(--fg) 72%, var(--bg));   /* ~9:1 on navy — secondary text */
+    --fg-40: color-mix(in srgb, var(--fg) 40%, var(--bg));   /* hairline ornaments */
+    --fg-30: color-mix(in srgb, var(--fg) 30%, var(--bg));
+    --fg-12: color-mix(in srgb, var(--fg) 12%, var(--bg));   /* faint rules */
+    --fg-05: color-mix(in srgb, var(--fg) 5%, var(--bg));    /* wells */
+    --bg-70: color-mix(in srgb, var(--bg) 72%, var(--fg));   /* secondary text on white chips */
+    --scrim: color-mix(in srgb, var(--navy) 84%, transparent);
+
+    /* --- Lines ------------------------------------------------------------ */
+    --hair: 1px solid var(--fg);
+    --hair-soft: 1px solid var(--fg-12);
+    --hair-dark: 1px solid var(--fg-12);
+  }
+
+  /* On yellow, navy/yellow mixes turn olive; keep secondary text pure navy. */
+  .theme-signal { --fg-70: var(--fg); }
+
+  :root {
+    /* --- Type ------------------------------------------------------------- */
+    --font-sans: "Saira", "Arial Narrow", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+    --font-jp: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif;
+    --font-jp-display: "Dela Gothic One", "Hiragino Sans", "Yu Gothic", sans-serif;
+
+    /* Display: Saira at a regular weight and normal width. Airy, but its squared
+       counters still echo the DM mark. */
+    --display-weight: 500;
+    --display-stretch: 100%;
+    --display-tracking: -0.035em;
+    --tracking-mono: 0.1em;
+
+    --step--2: 0.6875rem;
+    --step--1: 0.75rem;
+    --step-0: 1rem;
+    --step-1: clamp(1.0625rem, 1rem + 0.35vw, 1.3rem);
+    --step-2: clamp(1.5rem, 1.1rem + 1.4vw, 2.4rem);
+    --step-3: clamp(2.2rem, 1.4rem + 3vw, 4.25rem);
+    --step-4: clamp(3rem, 1.6rem + 6vw, 8rem);
+    --step-5: clamp(4.5rem, 2rem + 11vw, 14rem);
+
+    /* --- Space ------------------------------------------------------------ */
+    --gutter: clamp(16px, 2.8vw, 40px);
+    --section-pad: clamp(3.5rem, 7vw, 6.5rem); /* sections snap into place, so this is the landing margin */
+    --nav-h: 72px;
+
+    /* --- Motion ------------------------------------------------------------ */
+    --ease-mech: cubic-bezier(0.2, 0, 0, 1);
+    --ease-drawer: cubic-bezier(0.7, 0, 0.2, 1);
+    --dur-1: 100ms;
+    --dur-2: 200ms;
+    --dur-3: 420ms;
+  }
+}
