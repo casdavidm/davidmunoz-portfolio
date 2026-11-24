@@ -280,9 +280,11 @@
       "challenge": "Handmade goods are often undervalued. Maggie Carolina needed a brand that keeps the warmth of craft while looking polished enough to sell online, at markets and as gifts.",
       "solution": "A flowing script logo with a yarn ball, needles and a heart captures handcrafted care, set in a rich burgundy, blush and cream palette. A family of icons, a round stamp and the line “Crafted with Love.” carry the brand onto embroidered patches, engraved needles and hooks, yarn bands, hang tags, gift boxes, shopping bags, project pouches and a webshop, so every piece arrives looking like a gift.",
       "deliverables": ["Logo & icon set", "Brand stamp", "Colour palette & typography", "Packaging & yarn bands", "Hang tags & business cards", "Merchandise", "Webshop design"],
-      "cover": { "src": "assets/img/work/maggie-carolina/cover.jpg", "width": 960, "height": 960, "alt": "Maggie Carolina brand board: logo, icons, patch, business cards, packaging, webshop and lifestyle" },
+      "cover": { "src": "assets/img/work/maggie-carolina/cover.jpg", "width": 1200, "height": 896, "alt": "Maggie Carolina logo: a burgundy yarn ball with knitting needles beside a flowing script name and the line Knitting & Crochet" },
       "gallery": [
-        { "type": "image", "src": "assets/img/work/maggie-carolina/01.jpg", "width": 1694, "height": 934, "alt": "Maggie Carolina script logo with yarn ball and needles on burgundy", "caption": "Primary logo" }
+        { "type": "image", "src": "assets/img/work/maggie-carolina/01.jpg", "width": 1200, "height": 896, "alt": "Maggie Carolina business cards on a wooden table: the logo in white on burgundy, and owner details on cream stock", "caption": "Business cards" },
+        { "type": "image", "src": "assets/img/work/maggie-carolina/02.jpg", "width": 1200, "height": 896, "alt": "Cream and burgundy Maggie Carolina hang tags tied with twine on a chunky knit blanket", "caption": "Hang tags" },
+        { "type": "image", "src": "assets/img/work/maggie-carolina/03.jpg", "width": 1200, "height": 896, "alt": "Cream and burgundy Maggie Carolina paper shopping bags with pink tissue, surrounded by yarn", "caption": "Shopping bags" }
       ]
     },
     {
