@@ -550,20 +550,28 @@
     gap: 0.6rem;
   }
 
+  /* At rest the name sits flush with the image edge. On hover it slides in by
+     --pad and its yellow frame opens from the image edge, so both line up.
+     (padding-right reserves the frame's right margin; translate never reflows.) */
   .tile__title {
+    --pad: 0.22em;
     position: relative;
     isolation: isolate;
     justify-self: start;
+    padding-right: var(--pad);
     font-size: clamp(1.6rem, 0.9rem + 1.5vw, 2.6rem);
     line-height: 0.95;
+    transition: translate var(--dur-2) var(--ease-mech);
   }
 
-  /* The yellow frame that strokes in behind the name.
-     Sits outside the text box so hovering never shifts the layout. */
+  .tile__link:hover .tile__title,
+  .tile__link:focus-visible .tile__title { translate: var(--pad) 0; }
+
+  /* The yellow frame that strokes in behind the name, starting at the image edge. */
   .tile__title::before {
     content: "";
     position: absolute;
-    inset: -0.14em -0.22em -0.1em;
+    inset: -0.14em 0 -0.1em calc(-1 * var(--pad));
     z-index: -1;
     border: 1px solid transparent;
     pointer-events: none;
