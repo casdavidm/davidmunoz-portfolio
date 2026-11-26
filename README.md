@@ -62,6 +62,7 @@ tools/
 assets/
   fonts/                Saira (var), JetBrains Mono (var), Dela Gothic One + Zen Kaku Gothic New (JP subsets)
   img/work/<slug>/      cover.jpg + gallery frames
+demos/<slug>/           self-contained interactive demos, loaded click-to-open in the drawer via "hero"
   img/mascot/           hero cutout, helmet illustrations, video posters
 ```
 

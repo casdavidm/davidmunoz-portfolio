@@ -90,6 +90,32 @@
 
   "projects": [
     {
+      "slug": "koma",
+      "title": "koma",
+      "client": "Concept project",
+      "category": "Brand System & UX/UI",
+      "disciplines": ["brand", "digital"],
+      "tags": [],
+      "year": "2026",
+      "sector": "Consumer Audio",
+      "status": "published",
+      "summary": "A volume-dial symbol grown into a full brand, interface and sound system for a spatial-audio speaker.",
+      "overview": "Self-initiated concept for koma, a spatial-audio speaker brand. The identity starts from one idea, the volume knob, and carries it through a living design system, a room-calibration web app and the product itself.",
+      "challenge": "The first sketch of the symbol, a ring of growing dots, read as a loading spinner: the opposite of what a premium audio brand wants to say. It also fell apart at small sizes, where the smallest dots disappeared. The brand needed a mark with a clear meaning that would hold up from a 16 px favicon to a speaker grille.",
+      "solution": "The ring became a dial: seven dots on a 270° arc that grow clockwise, with the 90° gap at the bottom acting as the knob's stop. The name nods to the musical comma, the smallest tuning interval, and the symbol moves the same way, in small precise steps. An optical version keeps all seven dots legible below 40 px. The same geometry becomes the knobs of the Room Calibrator web app, the perforated grille of the koma one speaker and a seven-note sonic logo. The system is documented live, in Spanish and English: colour, motion and sound tokens, usage rules, a component state matrix and a night mode.",
+      "deliverables": ["Dial symbol & wordmark", "Optical small-size version", "Colour, motion & sound tokens", "Sonic logo & UI sounds", "Usage guidelines", "Component library & state matrix", "Room Calibrator web app", "Product render (koma one)", "Bilingual interactive site (ES/EN)"],
+      "cover": { "src": "assets/img/work/koma/cover.jpg", "width": 1200, "height": 896, "alt": "koma dial symbol and wordmark in charcoal on yellow" },
+      "hero": { "type": "embed", "src": "demos/koma/index.html", "poster": "assets/img/work/koma/01.jpg", "width": 1800, "height": 1125, "title": "koma interactive demo", "caption": "Live demo // Interactive" },
+      "gallery": [
+        { "type": "image", "src": "assets/img/work/koma/01.jpg", "width": 1800, "height": 1125, "alt": "koma homepage: headline, dial symbol on yellow, the koma one speaker on a wooden shelf and an animated dot field", "caption": "Homepage" },
+        { "type": "image", "src": "assets/img/work/koma/02.jpg", "width": 1800, "height": 1070, "alt": "Room Calibrator after measuring the room: connect, measure and tune steps, dot knobs and a calibrated frequency curve", "caption": "Room Calibrator // Calibrated" },
+        { "type": "image", "src": "assets/img/work/koma/03.jpg", "width": 1800, "height": 735, "alt": "Symbol construction on a 16 by 16 grid, showing the 270 degree orbit, the 90 degree gap and the clear space", "caption": "Symbol construction" },
+        { "type": "image", "src": "assets/img/work/koma/04.jpg", "width": 1800, "height": 779, "alt": "Usage rules for the symbol with six incorrect examples: rotated, reversed, gap at the top, distorted, with effects and as a spinner", "caption": "Usage rules" },
+        { "type": "image", "src": "assets/img/work/koma/06.jpg", "width": 1800, "height": 1125, "alt": "Component library in night mode: buttons, status badges, loading indicator and form validation", "caption": "Components // Night mode" },
+        { "type": "image", "src": "assets/img/work/koma/05.jpg", "width": 1800, "height": 743, "alt": "koma one speaker in the olive finish with its dot-pattern grille, next to the product details and finish selector", "caption": "koma one // Olive finish" }
+      ]
+    },
+    {
       "slug": "psychostart",
       "title": "PsychoStart",
       "client": "PsychoStart Running Shoes",
