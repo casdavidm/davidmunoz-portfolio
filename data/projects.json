@@ -84,7 +84,8 @@
       "code": "CAP.07",
       "label": "AI-Assisted Workflows",
       "scope": "Automation and AI tooling across the design pipeline.",
-      "match": []
+      "match": [],
+      "matchTags": ["ai"]
     }
   ],
 
@@ -95,7 +96,7 @@
       "client": "Concept project",
       "category": "Brand System & UX/UI",
       "disciplines": ["brand", "digital"],
-      "tags": [],
+      "tags": ["ai"],
       "year": "2026",
       "sector": "Consumer Audio",
       "status": "published",
